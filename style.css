@@ -1,339 +1,385 @@
+/* Importa la fuente Poppins desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* Define una variable de color principal */
 :root {
-    --color-main: #1C1C2A
+    --color-main: #1C1C2A;
 }
 
+/* Establece estilos generales para todos los elementos */
 *{
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Establece la fuente para todos los elementos */
+    box-sizing: border-box; /* Hace que el modelo de caja sea de borde para todos los elementos */
+    text-decoration: none; /* Quita la decoración de texto predeterminada */
+    list-style-type: none; /* Quita los estilos de lista */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
 }
 
+/* Estilos para el botón de alternar la barra lateral */
 #sidebar-toggle{
-    display: none;
+    display: none; /* Oculta el elemento con el id sidebar-toggle */
 }
 
+/* Estilos para la barra lateral cuando el toggle está activado */
 #sidebar-toggle:checked ~ .sidebar {
-    left: -100%;
+    left: -100%; /* Mueve la barra lateral fuera de la pantalla cuando el toggle está activado */
 }
 
+/* Estilos para el encabezado de la parte principal del contenido cuando el toggle está activado */
 #sidebar-toggle:checked ~ .main-content header {
-    left: 0;
-    width: 100%;
-    right: 0;
+    left: 0; /* Ajusta la posición del encabezado de la parte principal del contenido cuando el toggle está activado */
+    width: 100%; /* Establece el ancho al 100% cuando el toggle está activado */
+    right: 0; /* Ajusta el margen derecho cuando el toggle está activado */
 }
 
+/* Estilos para el contenido principal cuando el toggle está activado */
 #sidebar-toggle:checked ~ .main-content {
-    margin-left: 0;
+    margin-left: 0; /* Establece el margen izquierdo del contenido principal en 0 cuando el toggle está activado */
 }
 
+/* Estilos para la barra lateral */
 .sidebar {
-    width: 280px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    padding: 1rem;
-    background: var(--color-main);
-    color: #fff;
-    z-index: 20;
-    transition: left 300ms;
+    width: 280px; /* Establece el ancho de la barra lateral */
+    position: fixed; /* Mantiene la barra lateral en una posición fija */
+    left: 0; /* Ajusta la posición izquierda de la barra lateral */
+    top: 0; /* Ajusta la posición superior de la barra lateral */
+    height: 100%; /* Establece la altura al 100% */
+    padding: 1rem; /* Añade relleno */
+    background: var(--color-main); /* Usa el color principal definido en :root */
+    color: #fff; /* Establece el color del texto */
+    z-index: 20; /* Establece el índice z para la superposición */
+    transition: left 300ms; /* Agrega una transición suave cuando cambia la propiedad left */
 }
 
+/* Estilos para la marca en la barra lateral */
 .sidebar-brand {
-    height: 70px;
+    height: 70px; /* Establece la altura de la marca */
 }
 
+/* Estilos para flexbox en la marca */
 .brand-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Usa flexbox para alinear elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
+/* Estilos para los iconos en la marca */
 .brand-icons span {
-    font-size: 1.5rem;
-    margin-left: .5rem;
+    font-size: 1.5rem; /* Tamaño de fuente para los iconos */
+    margin-left: .5rem; /* Margen izquierdo para los iconos */
 }
 
+/* Estilos para la sección de usuario en la barra lateral */
 .sidebar-user {
-    margin: 0rem 0rem 1rem 0rem;
-    text-align: center;
+    margin: 0rem 0rem 1rem 0rem; /* Margen en la sección de usuario */
+    text-align: center; /* Alinea el texto al centro */
 }
 
+/* Estilos para la imagen de usuario en la barra lateral */
 .sidebar-user img {
-    width: 60%;
-    border-radius: 50%;
+    width: 60%; /* Establece el ancho de la imagen del usuario */
+    border-radius: 50%; /* Borde redondeado para la imagen del usuario */
 }
 
+/* Estilos para el nombre de usuario en la barra lateral */
 .sidebar-user h3 {
-    font-size: 1rem;
+    font-size: 1rem; /* Tamaño de fuente para el nombre de usuario */
 }
 
+/* Estilos para el rol de usuario en la barra lateral */
 .sidebar-user span {
-    font-size: .8rem;
+    font-size: .8rem; /* Tamaño de fuente para el rol de usuario */
 }
 
+/* Estilos para el menú de la barra lateral */
 .sidebar-menu {
-    margin-top: 3rem;
+    margin-top: 3rem; /* Margen superior para el menú */
 }
 
+/* Estilos para la cabeza del menú en la barra lateral */
 .menu-head {
-    text-transform: uppercase;
-    color: #8da2fb;
-    font-size: .75rem;
-    font-weight: 500;
-    margin-bottom: .5rem;
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    color: #8da2fb; /* Color del texto del encabezado del menú */
+    font-size: .75rem; /* Tamaño de fuente para el encabezado del menú */
+    font-weight: 500; /* Grosor de la fuente para el encabezado del menú */
+    margin-bottom: .5rem; /* Margen inferior para el encabezado del menú */
 }
 
+/* Estilos para las listas en el menú de la barra lateral */
 .sidebar-menu ul {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Margen inferior para las listas del menú */
 }
 
+/* Estilos para los elementos de la lista en el menú de la barra lateral */
 .sidebar-menu li {
-    margin-bottom: .9rem;
-        
+    margin-bottom: .9rem; /* Margen inferior para los elementos de la lista */
 }
 
+/* Estilos para los enlaces de los elementos de la lista en el menú de la barra lateral */
 .sidebar-menu li a {
-    color: #efefef;
-    font-size: .85rem;
-    display: flex;
-    align-items: center;
+    color: #efefef; /* Color del texto de los enlaces */
+    font-size: .85rem; /* Tamaño de fuente para los enlaces */
+    display: flex; /* Usa flexbox para los enlaces */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
+/* Estilos para los iconos de los enlaces en el menú de la barra lateral */
 .sidebar-menu li a span {
-    font-size: 1.5rem;
-    display: inline-block;
-    margin-right: .8rem;
-
+    font-size: 1.5rem; /* Tamaño de fuente para los iconos */
+    display: inline-block; /* Hace que los elementos de los iconos sean en línea */
+    margin-right: .8rem; /* Margen derecho para los iconos */
 }
 
+/* Estilos para el encabezado */
 header {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #efefef;
-    padding: 1rem 1.5rem;
-    position: fixed;
-    left: 280px ;
-    width: calc(100% - 280px);
-    top: 0;
-    z-index: 20;
-    background: #fff;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    height: 70px; /* Establece la altura del encabezado */
+    display: flex; /* Usa flexbox para el encabezado */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos del encabezado */
+    align-items: center; /* Centra los elementos verticalmente */
+    background: #efefef; /* Color de fondo del encabezado */
+    padding: 1rem 1.5rem; /* Añade relleno al encabezado */
+    position: fixed; /* Mantiene el encabezado en una posición fija */
+    left: 280px ; /* Ajusta la posición izquierda del encabezado */
+    width: calc(100% - 280px); /* Establece el ancho del encabezado */
+    top: 0; /* Ajusta la posición superior del encabezado */
+    z-index: 20; /* Establece el índice z para la superposición */
+    background: #fff; /* Color de fondo del encabezado */
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1); /* Sombra del encabezado */
 }
 
+/* Estilos para el botón de alternar el menú */
 .menu-toggle label {
-    height: 60px;
-    width: 60px;
-    display: grid;
-    place-items: center;
-    font-size: 1.5rem;
-    border-radius: 60%;
+    height: 60px; /* Establece la altura del botón de alternar el menú */
+    width: 60px; /* Establece el ancho del botón de alternar el menú */
+    display: grid; /* Usa grid para el botón de alternar el menú */
+    place-items: center; /* Centra el contenido del botón de alternar el menú */
+    font-size: 1.5rem; /* Tamaño de fuente para el botón de alternar el menú */
+    border-radius: 60%; /* Borde redondeado para el botón de alternar el menú */
 }
 
+/* Estilos para los iconos en el encabezado */
 .header-icons span {
-    display: inline-block;
-    margin-left: .7rem;
-    font-size: 1.4rem;
-
+    display: inline-block; /* Hace que los iconos del encabezado sean en línea */
+    margin-left: .7rem; /* Margen izquierdo para los iconos */
+    font-size: 1.4rem; /* Tamaño de fuente para los iconos */
 }
 
+/* Estilos cuando se pasa el ratón por encima del botón de alternar el menú */
 .menu-toggle label:hover {
-    background: #efefef;
-    
+    background: #efefef; /* Cambia el color de fondo cuando se pasa el ratón por encima */
 }
 
+/* Estilos para el contenido principal */
 .main-content {
-    margin-left: 280px;
-    transition: margin-left 300ms;
-    
+    margin-left: 280px; /* Establece el margen izquierdo del contenido principal */
+    transition: margin-left 300ms; /* Agrega una transición suave cuando cambia el margen izquierdo */
 }
 
+/* Estilos para la sección principal */
 main {
-    padding: 1.5rem;
-    background: #f1f5f9;
-    min-height: calc(100vh -70px);
-    margin-top: 70px;
+    padding: 1.5rem; /* Añade relleno a la sección principal */
+    background: #f1f5f9; /* Color de fondo para la sección principal */
+    min-height: calc(100vh -70px); /* Establece la altura mínima para la sección principal */
+    margin-top: 70px; /* Margen superior para la sección principal */
 }
 
+/* Estilos para el encabezado de página */
 .page-header {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Usa flexbox para el encabezado de página */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
+/* Estilos para los botones en el encabezado */
 .header-actions button{
-    outline: none;
-    color: #fff;
-    background: #5850EC;
-    border: none;
-    padding: .6rem 1rem;
-    margin-left: 1rem;
-    border-radius: 3px;
-    font-weight: 600;
+    outline: none; /* Quita el contorno al hacer clic */
+    color: #fff; /* Color del texto */
+    background: #5850EC; /* Color de fondo */
+    border: none; /* Quita el borde */
+    padding: .6rem 1rem; /* Añade relleno al botón */
+    margin-left: 1rem; /* Margen izquierdo */
+    border-radius: 3px; /* Borde redondeado */
+    font-weight: 600; /* Grosor de la fuente */
 }
 
+/* Estilos para los contenedores de las tarjetas */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-    margin-top: 2rem;
+    display: grid; /* Usa grid para los contenedores de las tarjetas */
+    grid-template-columns: repeat(3, 1fr); /* Establece las columnas de la cuadrícula */
+    grid-gap: 3rem; /* Espacio entre las tarjetas */
+    margin-top: 2rem; /* Margen superior para las tarjetas */
 }
 
+/* Estilos para las tarjetas individuales */
 .card-single {
-    background: #fff;
-    padding: 1rem;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
-    border-radius: 2px;
+    background: #fff; /* Color de fondo para las tarjetas individuales */
+    padding: 1rem; /* Añade relleno a las tarjetas individuales */
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1); /* Sombra de las tarjetas individuales */
+    border-radius: 2px; /* Borde redondeado */
 }
 
+/* Estilos para flexbox en las tarjetas */
 .card-flex {
-    display: grid;
-    grid-template-columns: 70% auto;
-    align-items: center;
+    display: grid; /* Usa grid para las tarjetas */
+    grid-template-columns: 70% auto; /* Establece las columnas de la cuadrícula */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
+/* Estilos para el encabezado de las tarjetas */
 .card-head span {
-    display: block;
-    text-transform: uppercase;
-    color: #555;
-    font-size: 0.9rem;
+    display: block; /* Hace que los elementos de los encabezados sean en bloque */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    color: #555; /* Color del texto */
+    font-size: 0.9rem; /* Tamaño de fuente para el encabezado */
 }
 
+/* Estilos para el subtítulo de las tarjetas */
 .card-head small {
-    font-weight: 600;
-    color: #555
+    font-weight: 600; /* Grosor de la fuente para el subtítulo */
+    color: #555; /* Color del subtítulo */
 }
 
+/* Estilos para el título de las tarjetas */
 .card-info h2 {
-    font-size: 2.2rem;
-    color: #333;
+    font-size: 2.2rem; /* Tamaño de fuente para el título */
+    color: #333; /* Color del título */
 }
 
+/* Estilos para el gráfico de las tarjetas */
 .card-chart span {
-    font-size: 5rem;
+    font-size: 5rem; /* Tamaño de fuente para el gráfico */
 }
 
+/* Estilos para el gráfico de las tarjetas cuando es de éxito */
 .card-chart.success span {
-    color: seagreen;
+    color: seagreen; /* Color del gráfico cuando es de éxito */
 }
 
+/* Estilos para el gráfico de las tarjetas cuando es de peligro */
 .card-chart.danger span {
-    color: tomato;
+    color: tomato; /* Color del gráfico cuando es de peligro */
 }
 
+/* Estilos para el gráfico de las tarjetas cuando es de advertencia */
 .card-chart.yellow span {
-    color: orangered;
+    color: orangered; /* Color del gráfico cuando es de advertencia */
 }
 
+/* Estilos para la cuadrícula de trabajos */
 .jobs-grid {
-    margin-top: 3rem;
-    display: grid;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
-    border-radius: 2px;
-    grid-template-columns: auto 66%;
-    grid-gap: 3rem;
+    margin-top: 3rem; /* Margen superior para la cuadrícula de trabajos */
+    display: grid; /* Usa grid para la cuadrícula de trabajos */
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1); /* Sombra de la cuadrícula de trabajos */
+    border-radius: 2px; /* Borde redondeado */
+    grid-template-columns: auto 66%; /* Establece las columnas de la cuadrícula */
+    grid-gap: 3rem; /* Espacio entre los elementos de la cuadrícula */
 }
 
+/* Estilos para las tarjetas de análisis */
 .analytics-card {
-    background: #fff;
-    padding: 1rem;
+    background: #fff; /* Color de fondo para las tarjetas de análisis */
+    padding: 1rem; /* Añade relleno a las tarjetas de análisis */
 }
 
+/* Estilos para el encabezado de análisis */
 .analytics-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3rem;
+    display: flex; /* Usa flexbox para el encabezado de análisis */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-bottom: 3rem; /* Margen inferior para el encabezado de análisis */
 }
 
+/* Estilos para el título de análisis */
 .analytics-head span {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamaño de fuente para el título */
 }
 
+/* Estilos para el subtítulo de análisis */
 .analytics-chart small {
-    font-weight: 600;
-    color: #555;
-    display: block;
-    margin-bottom: 1rem;
+    font-weight: 600; /* Grosor de la fuente para el subtítulo */
+    color: #555; /* Color del subtítulo */
+    display: block; /* Hace que los elementos del subtítulo sean en bloque */
+    margin-bottom: 1rem; /* Margen inferior para el subtítulo */
 }
 
+/* Estilos para el círculo de gráfico */
 .chart-circle {
-    height: 150px;
-    width: 150px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid #5859EC;
-    border-bottom: 10px solid #5850EC;
-    border-top: 10px solid #5850EC;
-    display: grid;
-    place-items: center;
-    margin: auto;
-    border-radius: 50%;
-    margin-bottom: 3rem;
+    height: 150px; /* Establece la altura del círculo de gráfico */
+    width: 150px; /* Establece el ancho del círculo de gráfico */
+    border-left: 10px solid transparent; /* Borde izquierdo del círculo de gráfico */
+    border-right: 10px solid #5859EC; /* Borde derecho del círculo de gráfico */
+    border-bottom: 10px solid #5850EC; /* Borde inferior del círculo de gráfico */
+    border-top: 10px solid #5850EC; /* Borde superior del círculo de gráfico */
+    display: grid; /* Usa grid para el círculo de gráfico */
+    place-items: center; /* Centra el contenido del círculo de gráfico */
+    margin: auto; /* Margen automático para el círculo de gráfico */
+    border-radius: 50%; /* Borde redondeado */
+    margin-bottom: 3rem; /* Margen inferior para el círculo de gráfico */
 }
 
+/* Estilos para el botón en las tarjetas de análisis */
 .analytics-card  button {
-    display: block;
-    padding: .6rem 1rem;
-    width: 100%;
-    height: 45px;
-    background: #5850EC;
-    color: #fff;
-    border: 1px solid #5850EC;
-    border-radius: 3px;
+    display: block; /* Hace que los botones de análisis sean en bloque */
+    padding: .6rem 1rem; /* Añade relleno al botón de análisis */
+    width: 100%; /* Establece el ancho al 100% */
+    height: 45px; /* Establece la altura del botón de análisis */
+    background: #5850EC; /* Color de fondo para el botón de análisis */
+    color: #fff; /* Color del texto del botón de análisis */
+    border: 1px solid #5850EC; /* Borde del botón de análisis */
+    border-radius: 3px; /* Borde redondeado */
 }
 
+/* Estilos para los trabajos */
 .jobs h3 small {
-    color: #5850EC;
-    font-weight: 600;
-    display: inline-block;
-    margin-left: 1rem;
-    font-size: .8rem;
+    color: #5850EC; /* Color para el subtítulo de trabajos */
+    font-weight: 600; /* Grosor de la fuente para el subtítulo de trabajos */
+    display: inline-block; /* Hace que el subtítulo de trabajos sea en bloque */
+    margin-left: 1rem; /* Margen izquierdo para el subtítulo de trabajos */
+    font-size: .8rem; /* Tamaño de fuente para el subtítulo de trabajos */
 }
 
+/* Estilos para las tablas de trabajos */
 .jobs table {
-    border-collapse: collapse;
-    margin-top: 1rem;
+    border-collapse: collapse; /* Colapsa los bordes de la tabla de trabajos */
+    margin-top: 1rem; /* Margen superior para la tabla de trabajos */
 }
 
+/* Estilos para los indicadores */
 span.indicator {
-    background: #C73613;
-    height: 10px;
-    width: 10px;
-    border-radius: 60%;
-
+    background: #C73613; /* Color de fondo para los indicadores */
+    height: 10px; /* Establece la altura de los indicadores */
+    width: 10px; /* Establece el ancho de los indicadores */
+    border-radius: 60%; /* Borde redondeado */
 }
 
+/* Estilos para los indicadores pares */
 span.indicator.even {
-    background: #37AB2A;
-    height: 10px;
-    width: 10px;
-    border-radius: 60%;
-
+    background: #37AB2A; /* Color de fondo para los indicadores pares */
+    height: 10px; /* Establece la altura de los indicadores pares */
+    width: 10px; /* Establece el ancho de los indicadores pares */
+    border-radius: 60%; /* Borde redondeado */
 }
 
+/* Estilos para los elementos de las celdas de las tablas de trabajos */
 .jobs table td div{
-    background: #fff;
-    margin-bottom: .8rem;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding: .5rem;
-    font-size: .85rem;
-    color: #444;
-    font-weight: 500;
+    background: #fff; /* Color de fondo para los elementos de las celdas */
+    margin-bottom: .8rem; /* Margen inferior para los elementos de las celdas */
+    height: 60px; /* Establece la altura de los elementos de las celdas */
+    display: flex; /* Usa flexbox para los elementos de las celdas */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: .5rem; /* Añade relleno a los elementos de las celdas */
+    font-size: .85rem; /* Tamaño de fuente para los elementos de las celdas */
+    color: #444; /* Color del texto para los elementos de las celdas */
+    font-weight: 500; /* Grosor de la fuente para los elementos de las celdas */
 }
 
+/* Estilos para los botones en las tablas de trabajos */
 table button {
-    background: #8da2fb;
-    color: midnightblue;
-    border: 1 px solid #8da2fb;
-    padding: .5rem;
-    border-radius: 3px;
+    background: #8da2fb; /* Color de fondo para los botones en las tablas de trabajos */
+    color: midnightblue; /* Color del texto para los botones en las tablas de trabajos */
+    border: 1 px solid #8da2fb; /* Borde para los botones en las tablas de trabajos */
+    padding: .5rem; /* Añade relleno a los botones en las tablas de trabajos */
+    border-radius: 3px; /* Borde redondeado */
 }
+
 
